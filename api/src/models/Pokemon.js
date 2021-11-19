@@ -14,23 +14,36 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    life: {
-      type: DataTypes.INTERGER
+    image: {
+      type: DataTypes.STRING
     },
-    strength: {
-      type: DataTypes.INTERGER
+    life: {                     // hp
+      type: DataTypes.INTEGER
     },
-    defending: {
-      type: DataTypes.INTERGER
+    attack: {
+      type: DataTypes.INTEGER
+    },
+    defense: {
+      type: DataTypes.INTEGER
     },
     speed: {
-      type: DataTypes.INTERGER
+      type: DataTypes.INTEGER
     },
     height: {
-      type: DataTypes.INTERGER
+      type: DataTypes.INTEGER
     },
     weight: {
-      type: DataTypes.INTERGER
+      type: DataTypes.INTEGER
+    },
+    created: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
     }
-  });
+  },
+    {
+      createdAt: false,
+      updatedAt: false,
+    }
+  );
 };
